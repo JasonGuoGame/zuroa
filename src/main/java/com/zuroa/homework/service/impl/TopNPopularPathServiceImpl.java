@@ -34,7 +34,7 @@ public class TopNPopularPathServiceImpl implements TopNPopularPathService {
         int min = n < size? n : size;
         for (int i = 0;i < min; i++) {
             ThreePath next = iterator.next();
-            rtn[i] = next.toString();
+            rtn[i] = next.toString() + " : " + threePathIntegerMap.get(next);
         }
 
         return rtn;
